@@ -20,8 +20,9 @@ def main():
 
 
 	
-	Milkyway = Galaxy(10, 10, vector(0,0,0), vector(0,0,0), color.red)
-	Andromeda = Galaxy(10, 10, vector(0,0,0), vector(0,0,0), color.blue)
+	Milkyway = Galaxy(100, 100, vector(0,0,0), vector(0,0,0), color.red)
+	
+	Andromeda = Galaxy(100, 100, vector(200,200,200), vector(0,0,0), color.blue)
 
 
 
