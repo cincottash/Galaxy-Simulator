@@ -1,8 +1,7 @@
 from star import *
 import random
 
-class Galaxy(object):
-
+class Galaxy():
 	def __init__(self, numStars, radius, pos, velocity, color):
 		self.radius = radius
 		self.pos = pos

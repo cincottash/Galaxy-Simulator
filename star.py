@@ -1,6 +1,6 @@
 from vpython import *
 
-class Star(object):
+class Star():
 	def __init__(self, mass, radius, pos, velocity, color):
 		self.obj = sphere(pos = pos, radius = radius, color = color)
 		self.mass = mass
