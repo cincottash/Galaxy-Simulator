@@ -7,4 +7,5 @@ class Star(object):
 		self.radius = radius
 		self.velocity = velocity
 		self.pos = pos
+		#self.color = color
 	
