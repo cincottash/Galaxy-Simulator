@@ -24,6 +24,7 @@ def main():
 	
 	Andromeda = Galaxy(100, 100, vector(200,200,200), vector(0,0,0), color.blue)
 
+	#TODO: Make the stars move in ONE galaxy first, then add the second galaxy and see what happens
 
 
 if __name__ == '__main__':
