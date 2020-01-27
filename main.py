@@ -19,7 +19,7 @@ def main():
 	'''
 
 
-	#TODO: SPACE THE GALAXYS OUT
+	
 	Milkyway = Galaxy(10, 10, vector(0,0,0), vector(0,0,0), color.red)
 	Andromeda = Galaxy(10, 10, vector(0,0,0), vector(0,0,0), color.blue)
 
