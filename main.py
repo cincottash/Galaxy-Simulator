@@ -18,7 +18,11 @@ def main():
 
 	'''
 
-	Milkyway = Galaxy(10, 10, vector(0,0,0), vector(0,0,0))
+
+	#TODO: SPACE THE GALAXYS OUT
+	Milkyway = Galaxy(10, 10, vector(0,0,0), vector(0,0,0), color.red)
+	Andromeda = Galaxy(10, 10, vector(0,0,0), vector(0,0,0), color.blue)
+
 
 
 if __name__ == '__main__':
