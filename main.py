@@ -1,6 +1,5 @@
-from vpython import *
-from galaxy import *
 from globals import *
+
 def main():
 	time = 0
 	dt = 0.01
@@ -20,9 +19,9 @@ def main():
 
 
 	
-	Milkyway = Galaxy(100, 100, vector(0,0,0), vector(0,0,0), color.red)
+	Milkyway = Galaxy(numStars, galaxyRadius, milkywayPos, initialVelocity, color.red)
 	
-	Andromeda = Galaxy(100, 100, vector(200,200,200), vector(0,0,0), color.blue)
+	Andromeda = Galaxy(numStars, galaxyRadius, andromedaPos, initialVelocity, color.blue)
 
 	#TODO: Make the stars move in ONE galaxy first, then add the second galaxy and see what happens
 
