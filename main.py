@@ -1,8 +1,12 @@
 from globals import *
 from star import *
 from galaxy import *
-#def calculateStarForce(starA):
-
+'''
+def calculateStarForce(galaxyA):
+	for star in range(len(galaxyA.starList)):
+		if(star != galaxyA.starList[i]):
+			print("hello world!")
+'''
 def main():
 	time = 0
 	dt = 0.01
