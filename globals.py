@@ -1,6 +1,7 @@
 from vpython import *	
-from galaxy import *
+#from galaxy import *
 
+starList = []
 numStars = 100
 initialVelocity = vector(0,0,0)
 galaxyRadius = 100

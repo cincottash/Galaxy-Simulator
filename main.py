@@ -1,4 +1,7 @@
 from globals import *
+from star import *
+from galaxy import *
+#def calculateStarForce(starA):
 
 def main():
 	time = 0
@@ -21,8 +24,10 @@ def main():
 	
 	Milkyway = Galaxy(numStars, galaxyRadius, milkywayPos, initialVelocity, color.red)
 	
-	Andromeda = Galaxy(numStars, galaxyRadius, andromedaPos, initialVelocity, color.blue)
 
+
+	#Andromeda = Galaxy(numStars, galaxyRadius, andromedaPos, initialVelocity, color.blue)
+	#print(Milkyway.starList[0])
 	#TODO: Make the stars move in ONE galaxy first, then add the second galaxy and see what happens
 
 
