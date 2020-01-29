@@ -25,13 +25,13 @@ def calculateStarForce(galaxyA):
 	#update positions AFTER finding all the new velocities so we can update the planets all at once
 	for i in range(len(galaxyA.starList)):
 		print("third for loop")
-		galaxyA.starList[i].obj.pos.x += dt
-		galaxyA.starList[i].obj.pos.y += dt
-		galaxyA.starList[i].obj.pos.z += dt
+		galaxyA.starList[i].obj.pos.x += galaxyA.starList[i].velocity.x
+		galaxyA.starList[i].obj.pos.y += galaxyA.starList[i].velocity.y
+		galaxyA.starList[i].obj.pos.z += galaxyA.starList[i].velocity.z
 
 def main():
 	time = 0
-	dt = 0.01
+	dt = 0.1
 	'''
 	star = Star(2, 1, vector(0,0,0), vector(1,0,0))
 	acceleration = vector(1,0,0)
