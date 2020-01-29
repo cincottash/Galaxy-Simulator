@@ -16,4 +16,6 @@ class Galaxy():
 			starList.append(Star(10, random.randint(1, 3), vector(pos.x+random.randint(-radius, radius)/radius*radius, pos.y+random.randint(-radius, radius)/radius*radius, pos.z+random.randint(-radius, radius)/radius*radius), vector(0,0,0), color))
 			galaxyMass += starList[i].mass
 
+		
+
 
