@@ -1,16 +1,36 @@
 from globals import *
 from star import *
 from galaxy import *
-'''
+
+
+
 def calculateStarForce(galaxyA):
-	for star in range(len(galaxyA.starList)):
-		if(star != galaxyA.starList[i]):
-			print("hello world!")
-'''
+	for i in range(len(galaxyA.starList)):
+		for j in range(len(galaxyA.starList)):
+			#dont calculate force on itself
+			if(galaxyA.starList[i] != galaxyA.starList[j]):
+				#do force calculation here
+				print("hello")
+		#Change acceleration/velocity here
+
+		galaxyA.starList[i].acceleration.x += dt
+		galaxyA.starList[i].acceleration.y += dt
+		galaxyA.starList[i].acceleration.z += dt
+
+		galaxyA.starList[i].velocity.x += galaxyA.starList[i].acceleration.x
+		galaxyA.starList[i].velocity.y += galaxyA.starList[i].acceleration.y
+		galaxyA.starList[i].velocity.z += galaxyA.starList[i].acceleration.z
+	
+	#update positions AFTER finding all the new velocities so we can update the planets all at once
+	for i in range(len(galaxyA.starList)):
+		print("third for loop")
+		galaxyA.starList[i].obj.pos.x += dt
+		galaxyA.starList[i].obj.pos.y += dt
+		galaxyA.starList[i].obj.pos.z += dt
+
 def main():
 	time = 0
 	dt = 0.01
-	
 	'''
 	star = Star(2, 1, vector(0,0,0), vector(1,0,0))
 	acceleration = vector(1,0,0)
@@ -25,14 +45,18 @@ def main():
 	'''
 
 
-	
-	Milkyway = Galaxy(numStars, galaxyRadius, milkywayPos, initialVelocity, color.red)
-	
-
-
-	#Andromeda = Galaxy(numStars, galaxyRadius, andromedaPos, initialVelocity, color.blue)
-	#print(Milkyway.starList[0])
 	#TODO: Make the stars move in ONE galaxy first, then add the second galaxy and see what happens
+
+	Milkyway = Galaxy(numStars, galaxyRadius, color.red)
+	#Andromeda = Galaxy(numStars, galaxyRadius, andromedaPos, initialVelocity, color.blue)
+
+	while time < 100:
+		rate(100)
+		#print("working")	
+		calculateStarForce(Milkyway)
+		time += dt
+	
+	
 
 
 if __name__ == '__main__':
