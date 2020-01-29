@@ -2,12 +2,13 @@ from globals import *
 from star import *
 from galaxy import *
 
-
-
+#TODO: Make the stars move in ONE galaxy first, then add the second galaxy and see what happens
 def calculateStarForce(galaxyA):
+	#Loop through each star to find the force exerted on it (due to all the other stars, but not the star itself)
 	for i in range(len(galaxyA.starList)):
+		#Loop through the rest of the stars to find the force each one exterts on our current star (starList[i])
 		for j in range(len(galaxyA.starList)):
-			#dont calculate force on itself
+			#dont calculate force of star on itself
 			if(galaxyA.starList[i] != galaxyA.starList[j]):
 				#do force calculation here
 				print("hello")
@@ -44,8 +45,6 @@ def main():
 
 	'''
 
-
-	#TODO: Make the stars move in ONE galaxy first, then add the second galaxy and see what happens
 
 	Milkyway = Galaxy(numStars, galaxyRadius, color.red)
 	#Andromeda = Galaxy(numStars, galaxyRadius, andromedaPos, initialVelocity, color.blue)
