@@ -12,6 +12,6 @@ class Star():
 		self.color = color
 		self.theta = 0
 		self.distance = 0
-		self.force = vector(0,0,0)
+		self.force = 0
 
 	

@@ -11,6 +11,8 @@ class Galaxy():
 		self.mass = 0
 
 		self.starList = []
+		#TODO: ADD A SUN
+		#self.starList.append(Star(10, 2, vector(self.pos.x, self.pos.y, self.pos.z), self.color))
 		for i in range(numStars):
 			#scatter the stars within the galaxy's radius
 			self.starList.append(Star(10, random.randint(1, 3), vector(self.pos.x+random.randint(-radius, radius)/radius*radius, self.pos.y+random.randint(-radius, radius)/radius*radius, self.pos.z+random.randint(-radius, radius)/radius*radius), self.color))
