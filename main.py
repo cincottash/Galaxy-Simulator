@@ -18,13 +18,13 @@ def calculateStarForce(galaxyA):
 				galaxyA.starList[i].force += (6.67*galaxyA.starList[i].mass*galaxyA.starList[j].mass)/(distance * 1000000)
 
 				#Change acceleration/velocity here
-				galaxyA.starList[i].acceleration.x += galaxyA.starList[i].force * math.cos(galaxyA.starList[i].theta)
-				galaxyA.starList[i].acceleration.y += galaxyA.starList[i].force * math.sin(galaxyA.starList[i].theta)
-				galaxyA.starList[i].acceleration.z += galaxyA.starList[i].force * math.tan(galaxyA.starList[i].theta)
+				galaxyA.starList[i].acceleration.x += (galaxyA.starList[i].force * math.cos(galaxyA.starList[i].theta))/galaxyA.starList[i].mass
+				galaxyA.starList[i].acceleration.y += (galaxyA.starList[i].force * math.sin(galaxyA.starList[i].theta))/galaxyA.starList[i].mass
+				galaxyA.starList[i].acceleration.z += (galaxyA.starList[i].force * math.tan(galaxyA.starList[i].theta))/galaxyA.starList[i].mass
 
-		galaxyA.starList[i].velocity.x += galaxyA.starList[i].acceleration.x/10000
-		galaxyA.starList[i].velocity.y += galaxyA.starList[i].acceleration.y/10000
-		galaxyA.starList[i].velocity.z += galaxyA.starList[i].acceleration.z/10000
+		galaxyA.starList[i].velocity.x += galaxyA.starList[i].acceleration.x/1000
+		galaxyA.starList[i].velocity.y += galaxyA.starList[i].acceleration.y/1000
+		galaxyA.starList[i].velocity.z += galaxyA.starList[i].acceleration.z/1000
 	
 	#update positions AFTER finding all the new velocities so we can update the planets all at once
 	for i in range(len(galaxyA.starList)):

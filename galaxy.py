@@ -15,7 +15,7 @@ class Galaxy():
 		#self.starList.append(Star(7, 7, vector(self.pos.x, self.pos.y, self.pos.z), self.color))
 		for i in range(numStars):
 			#scatter the stars within the galaxy's radius
-			massRadius = random.randint(1, 5)
+			massRadius = random.randint(1, 5) #makes so mass and radius are the same value
 			self.starList.append(Star(massRadius, massRadius, vector(self.pos.x+random.randint(-radius, radius)/radius*radius, self.pos.y+random.randint(-radius, radius)/radius*radius, self.pos.z+random.randint(-radius, radius)/radius*radius), self.color))
 			self.mass += self.starList[i].mass
 
