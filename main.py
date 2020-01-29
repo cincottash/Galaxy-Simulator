@@ -13,7 +13,6 @@ def calculateStarForce(galaxyA):
 				#do force calculation here
 				print("hello")
 		#Change acceleration/velocity here
-
 		galaxyA.starList[i].acceleration.x += dt
 		galaxyA.starList[i].acceleration.y += dt
 		galaxyA.starList[i].acceleration.z += dt
@@ -32,19 +31,7 @@ def calculateStarForce(galaxyA):
 def main():
 	time = 0
 	dt = 0.1
-	'''
-	star = Star(2, 1, vector(0,0,0), vector(1,0,0))
-	acceleration = vector(1,0,0)
-	
-	while(time<100):
-		rate(100)
-		star.vel += acceleration*dt
-		#use.obj to refrence the sphere
-		star.obj.pos += star.vel*dt
-		time += dt
-
-	'''
-
+	#print(vector(0,0,0) + vector(0,0,0))
 
 	Milkyway = Galaxy(numStars, galaxyRadius, color.red)
 	#Andromeda = Galaxy(numStars, galaxyRadius, andromedaPos, initialVelocity, color.blue)
